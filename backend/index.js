@@ -24,3 +24,12 @@ app.post("/items", (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
 });
+
+// DELETE: 指定したインデックスのアイテムを削除
+app.delete("/items/:index", (req, res) => {
+  const idx = parseInt(req.params.index);
+  if (!isNaN(idx) && idx >= 0 && idx < items.length) {
+    items.splice(idx, 1);
+  }
+  res.json({ items });
+});

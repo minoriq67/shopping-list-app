@@ -26,6 +26,16 @@ function ShoppingList() {
     setInput("");
   };
 
+  // アイテム削除
+const deleteItem = async (index) => {
+  const res = await fetch(`http://localhost:8000/items/${index}`, {
+    method: "DELETE",
+  });
+  const data = await res.json();
+  setItems(data.items);
+};
+
+
   return (
     <div style={{ padding: "20px" }}>
       <h1>🛒 買い物リスト</h1>
@@ -37,9 +47,14 @@ function ShoppingList() {
       <button onClick={addItem}>追加</button>
 
       <ul>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
+       {items.map((item, index) => (
+        <li key={index}>
+         {item}{" "}
+         <button onClick={() => deleteItem(index)} style={{ marginLeft: "10px" }}>
+          削除
+         </button>
+        </li>
+       ))}
       </ul>
     </div>
   );
