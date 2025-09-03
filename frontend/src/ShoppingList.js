@@ -54,7 +54,7 @@ function ShoppingList() {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h2>買い物リスト</h2>
+      <h2>🛒 買い物リスト</h2>
       <input
         type="text"
         value={newItem}
@@ -80,9 +80,9 @@ function ShoppingList() {
       </button>
 
       <ul style={{ listStyleType: "none", padding: 0 }}>
-        {items.map((item, index) => (
+        {items.map((item) => (
           <li
-            key={index}
+            key={item.id}
             style={{
               textDecoration: item.checked ? "line-through" : "none",
               marginBottom: "8px",
@@ -91,12 +91,12 @@ function ShoppingList() {
             <input
               type="checkbox"
               checked={item.checked}
-              onChange={() => toggleCheck(index)}
+              onChange={() => toggleCheck(item.id)}
               style={{ transform: "scale(1.5)", marginRight: "8px" }}
             />
             {item.name} （×{item.quantity}）
             <button
-              onClick={() => deleteItem(index)}
+              onClick={() => deleteItem(item.id)}
               style={{ marginLeft: "10px" }}
             >
               削除
