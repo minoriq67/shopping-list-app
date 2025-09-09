@@ -8,28 +8,38 @@ app.use(cors());
 app.use(express.json());
 
 let items = [];
-let nextId = 0;
+let nextId = 1;
 
 // アイテム一覧
 app.get("/items", (req, res) => {
-  res.json(items);
+  res.json({ items });
 });
 
 // アイテム追加
 app.post("/items", (req, res) => {
-  const { name, quantity } = req.body;
+  const { name, quantity, category } = req.body;
   if (typeof name === "string" && name.trim() !== "") {
-    const q = parseInt(quantity) || 1; //数字がなければ1にする
-    items.push({ id: nextId++, name: name.trim(), quantity: q, checked: false });
+    items.push({
+      id: nextId++,
+      name: name.trim(),
+      quantity: parseInt(quantity) || 1,
+      checked: false,
+      category: category || "その他",
+    });
   }
   res.json({ items });
 });
 
+
 // チェック状態を切り替え
-app.put("/items/:id", (req, res) => {
+app.patch("/items/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  const item = items.find((it) => it.id === id);
-  if (item) item.checked = !item.checked;
+  const item = items.find((i) => i.id === id);
+  if (item) {
+    if (req.body.hasOwnProperty("checked")) {
+      item.checked = req.body.checked;
+    }
+  }
   res.json({ items });
 });
 
@@ -41,7 +51,7 @@ app.listen(PORT, () => {
 // DELETE: 指定したインデックスのアイテムを削除
 app.delete("/items/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  items = items.filter((it) => it.id !== id);
+  items = items.filter((i) => i.id !== id);
   res.json({ items });
 });
 
