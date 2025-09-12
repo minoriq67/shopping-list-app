@@ -97,10 +97,32 @@ function ShoppingList() {
             </option>
           ))}
         </select>
-        <button type="submit">追加</button>
+
+        <button 
+          type="submit"
+          style={{
+            borderRadius: "5px",
+            marginTop: "10px", 
+        　  marginBottom: "10px",
+            marginLeft: "8px",
+            padding: "2px 8px",
+          }}
+          >
+          追加
+        </button>
       </form>
 
-      <button onClick={deleteAllItems} style={{ marginTop: "10px",backgroundColor:"blue",color:"white"}}>
+      <button onClick={deleteAllItems} 
+      　　style={{ 
+        　marginTop: "0px", //　ボタン上に余白
+        　marginBottom: "12px", //　ボタン下に余白
+          marginLeft: "8px",
+        　backgroundColor:"#4169e1",
+        　color:"white",
+          borderRadius: "5px",
+          padding: "2px 8px",
+        }}
+      >
         全削除
       </button>
 
@@ -112,7 +134,7 @@ function ShoppingList() {
           borderRadius: "13px",
           padding: "5px 20px",
           marginBottom: "12px", //　文字下に余白
-          boxShadow: "0 2px 5px rgba(0,1,4,0.12)",
+          boxShadow: "0 2px 5px rgba(0,1,4,0.12)", // 影
          }}
         >
          <h3 style={{ fontSize: "1.1rem", color: "#444", marginBottom: "8px",
@@ -135,12 +157,25 @@ function ShoppingList() {
                     type="checkbox"
                     checked={item.checked}
                     onChange={() => toggleCheck(item.id)}
-                    style={{ transform: "scale(1.5)", marginRight: "8px" }}
+                    style={{ 
+                      transform: "scale(1.5)",
+                      marginRight: "8px",
+                      borderRadius: "5px",
+                     }}
                   />
                   {item.name} （×{item.quantity}）
+
                   <button
                     onClick={() => deleteItem(item.id)}
-                    style={{ marginLeft: "10px"}}
+                    style={{ 
+                     marginLeft: "8px", // 文字とボタンの距離
+                    backgroundColor: "#ffb3ba",  // やさしいピンク
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "5px", //　ボックスの丸み
+                    padding: "2px 8px",
+                    cursor: "pointer",
+                    fontSize: "0.9rem",}}
                   >
                     削除
                   </button>
