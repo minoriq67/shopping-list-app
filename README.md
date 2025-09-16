@@ -17,6 +17,11 @@ React（フロントエンド）＋ Node.js + Express（バックエンド）で
 
 ---
 
+## 📸 スクリーンショット
+![買い物リストの画面]()
+
+---
+
 ## 使用技術
 
 - Frontend: React (Create React App)
@@ -28,18 +33,18 @@ React（フロントエンド）＋ Node.js + Express（バックエンド）で
 
 ## セットアップ手順
 
-### 1. リポジトリを clone
+1. リポジトリを clone
 ```bash
 git clone https://github.com/minoriq67/shopping-list-app.git
 cd shopping-list-app
 
-### 2. Backendのセットアップ
+2. Backend のセットアップ
 ```bash
 cd backend
 npm install
 node index.js
 
-### 3. Frontendのセットアップ
+3. Frontendのセットアップ
 ```bash
 cd frontend
 npm install
