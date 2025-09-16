@@ -1,5 +1,3 @@
-# shopping-list-app
-
 # 買い物リストアプリ
 
 カテゴリ分け・数量指定・チェック機能付きの **シンプルな買い物リストアプリ** 。  
@@ -33,21 +31,23 @@ React（フロントエンド）＋ Node.js + Express（バックエンド）で
 
 ## セットアップ手順
 
-1. リポジトリを clone
-```bash
+### 1.リポジトリをclone
+```bash`
 git clone https://github.com/minoriq67/shopping-list-app.git
 cd shopping-list-app
 
-2. Backend のセットアップ
-```bash
+### 2.Backendのセットアップ
+```bash`
 cd backend
 npm install
 node index.js
 
-3. Frontendのセットアップ
-```bash
+### 3.Frontendのセットアップ
+```bash`
 cd frontend
 npm install
 npm start
+
+
 
 
