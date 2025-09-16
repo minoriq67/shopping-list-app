@@ -133,7 +133,7 @@ function ShoppingList() {
           backgroundColor: categoryColors[cat],  // カテゴリごとに色付け
           borderRadius: "13px",
           padding: "5px 20px",
-          marginBottom: "12px", //　文字下に余白
+          marginBottom: "10px", //　文字下に余白
           boxShadow: "0 2px 5px rgba(0,1,4,0.12)", // 影
          }}
         >
