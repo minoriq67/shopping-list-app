@@ -32,21 +32,24 @@ React（フロントエンド）＋ Node.js + Express（バックエンド）で
 ## セットアップ手順
 
 ### 1.リポジトリをclone
-```bash`
+```bash
 git clone https://github.com/minoriq67/shopping-list-app.git
 cd shopping-list-app
+```
 
 ### 2.Backendのセットアップ
-```bash`
+```bash
 cd backend
 npm install
 node index.js
+```
 
 ### 3.Frontendのセットアップ
-```bash`
+```bash
 cd frontend
 npm install
 npm start
+```
 
 
 
