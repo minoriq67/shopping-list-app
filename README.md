@@ -16,8 +16,10 @@ React（フロントエンド）＋ Node.js（バックエンド）で構築。
 ---
 
 ## 📸 スクリーンショット
-![アプリ画面](https://github.com/minoriq67/shopping-list-app/blob/main/images/screenshot1.png?raw=true)
+
 ### アプリ画面：アイテム追加や数量指定、カテゴリわけが出来るメイン画面
+![アプリ画面](https://github.com/minoriq67/shopping-list-app/blob/main/images/screenshot1.png?raw=true)
+
 ---
 
 ## 使用技術
