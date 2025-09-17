@@ -16,7 +16,7 @@ React（フロントエンド）＋ Node.js（バックエンド）で構築。
 ---
 
 ## 📸 スクリーンショット
-(![アプリ基本画面](https://github.com/minoriq67/shopping-list-app/blob/main/images/screenshot1.png?raw=true))
+![アプリ画面](https://github.com/minoriq67/shopping-list-app/blob/main/images/screenshot1.png?raw=true)
 
 ---
 
